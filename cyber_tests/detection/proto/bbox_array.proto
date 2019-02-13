@@ -1,0 +1,26 @@
+syntax = "proto2";
+
+package apollo.cyber_tests.detection.proto;
+
+message BBox{
+    optional uint64 x=1;
+    optional uint64 y=2;
+    optional uint64 w=3;
+    optional uint64 h=4;
+}
+
+message BBoxObject{
+    optional BBox bbox=1;
+    optional uint64 cls_id=5;
+    optional string cls_str=6;
+    optional float prob=7;
+}
+
+
+message Chatter {
+    optional uint64 timestamp = 1;
+    optional uint64 lidar_timestamp = 2;
+    optional uint64 seq = 3;
+    optional bytes content = 4;
+}
+
